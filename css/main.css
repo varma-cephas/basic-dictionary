@@ -1,0 +1,65 @@
+:root{
+    --secondary-color: #777777
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+ion-icon{
+    color: var(--secondary-color);
+}
+
+.book-icon{
+    font-size: 2.6em;
+}
+
+/* dark mode container */
+.dark-mode-container{
+    display: flex;
+    align-items: center;
+    gap: .80em;
+}
+
+.moon-icon{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.dark-mode-button-container{
+    background: var(--secondary-color);
+    padding: .20em 2em .20em .20em;
+    border-radius: 20px;
+}
+
+.inner-circle-button{
+    background: #FFF;
+    max-width: fit-content;
+    color: white;
+    padding: 0 1em 0 0;
+    cursor: pointer;
+    border-radius: 100%;
+}
+/* dark mode container */
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border: 2px solid;
+    padding: 1.2em;
+    justify-content: space-between;
+}
+
+nav ul li{
+    list-style-type: none;
+}
