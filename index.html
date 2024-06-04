@@ -18,16 +18,90 @@
             <ul>
                 <li>
                     <a href="#">
-                        <ion-icon name="book-outline" class="book-icon"></ion-icon>
+                        <ion-icon name="book-outline" class="book-icon-logo"></ion-icon>
                     </a>
                 </li>                
                 <li class="dark-mode-container">
-                    <div class="dark-mode-button-container">
-                        <div class="inner-circle-button">-</div>
-                    </div>
-                    <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
+                    <div>
+                        <input type="checkbox" class="checkbox" id="checkbox">
+                        <label for="checkbox" class="checkbox-label">
+                          <ion-icon name="moon" class="moon"></ion-icon>
+                          <ion-icon name="sunny" class="sunny"></ion-icon>
+                          <span class="ball"></span>
+                        </label>
+                      </div>
                 </li>
             </ul>
         </nav>
+
+        <section>
+            <div class="search-input-outer-container">
+                <div class="search-input-inner-container">
+                    <div class="search-input-container">
+                        <form action="" class="search-word-defintion">
+                            <input type="text"  placeholder="ex. keyboard" class="search-word-input">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-word-outer-container">
+                <div class="searched-word-container">
+                    <div class="search-word-inner-contianer">
+                        <div class="word-container">
+                            <h1 class="word">keyboard</h1>
+                            <p class="phonetic">//</p>
+                            <p class="part-of-speech"></p>
+                        </div>
+                        <div class="play-button-container">
+                            <ion-icon name="play" class="play-button"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meaning-container">
+                <h3>Meaning</h3>
+                <div class="individual-meaning-container">
+                    <ul>
+                        <li class="meaning1"></li>
+                        <li class="meaning2"></li>
+                        <li class="meaning3"></li>
+                    </ul>
+                </div>
+                <div class="synonyms-outer-container">
+                    <div class="synonyms-container">
+                        <h3>Synonyms</h3>
+                        <h3 class="synonym-name"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meaning-container another-meaning-container">
+                <div class="verb-part-of-speech-container">
+                    <p class="part-of-speech another-part-of-speech"></p>
+                </div>
+                <h3>Meaning</h3>
+                <div class="verb-meaning-definition">
+                    <ul>
+                        <li class="another-part-of-speech-meaning"></li>
+                        <p class="another-part-of-speech-example"></p>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="source-container">
+                <div class="source-inner-container">
+                    <p>Source</p>
+                        <div class="link-container">
+                            <a href="#" class="external-link-container" target="_blank">
+                                See source
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="./js/app.js"></script>
     </body>
 </html>

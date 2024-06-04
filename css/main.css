@@ -1,5 +1,7 @@
 :root{
-    --secondary-color: #777777
+    --secondary-color: #777777;
+    --thietiary-color: #A859E2;
+    --fourthary-color: #E9CFFC;
 }
 
 *, *::before, *::after{
@@ -12,42 +14,63 @@ html{
 
 body{
     margin: 0;
+    transition: background 0.2s linear;
 }
 
 ion-icon{
     color: var(--secondary-color);
 }
 
-.book-icon{
+.book-icon-logo{
     font-size: 2.6em;
 }
 
+.toggleBookIconLogo{
+    color: #FFF;
+}
+
 /* dark mode container */
-.dark-mode-container{
-    display: flex;
-    align-items: center;
-    gap: .80em;
+body.dark {background-color: #292c35;} /* #9b59b6 */
+
+body.dark h1, body.dark {color: #fff;}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
 }
 
-.moon-icon{
-    font-size: 1.5em;
-    cursor: pointer;
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.dark-mode-button-container{
-    background: var(--secondary-color);
-    padding: .20em 2em .20em .20em;
-    border-radius: 20px;
+.moon {color: #f1c40f;}
+
+.sunny {color: #f39c12;}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
 }
 
-.inner-circle-button{
-    background: #FFF;
-    max-width: fit-content;
-    color: white;
-    padding: 0 1em 0 0;
-    cursor: pointer;
-    border-radius: 100%;
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
 }
+
 /* dark mode container */
 
 nav ul{
@@ -56,10 +79,174 @@ nav ul{
     display: flex;
     align-items: center;
     border: 2px solid;
+    border-radius: 0 0 10px 10px;
     padding: 1.2em;
     justify-content: space-between;
 }
 
 nav ul li{
     list-style-type: none;
+}
+
+
+.search-input-container input[type=text]{
+    box-sizing: border-box;
+    border: 2px solid #e8dfdf;
+    background-color: #e8dfdf;
+    border-radius: 25px;
+    padding: 1rem 3.5rem;
+    color: #111;
+    width: 100%;
+    font-size: 1.1rem;
+    background-image: url("/assets/search.svg");
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 16em .85em;
+    max-width: 20em;
+}
+
+.search-input-inner-container{
+    width: fit-content;
+    margin: 1.2em auto;
+}
+
+.search-word-inner-contianer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searched-word-container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.phonetic{
+    color: #9e2ce4;
+}
+
+.play-button{
+    font-size: 1.7em;
+    color: var(--thietiary-color);
+}
+
+.word-container{
+    font-size: 1.3em;
+}
+
+.play-button-container{
+    border: 2px solid #E9CFFC;
+    background: #E9CFFC;
+    padding: .60em;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.part-of-speech{
+    border: 2px solid var(--fourthary-color);
+    background: var(--fourthary-color);
+    color: #9e2ce4;
+    max-width: fit-content;
+    padding: .50em;
+    border-radius: 10px;
+}
+
+li::marker{
+    color: var(--thietiary-color);
+}
+.meaning-container h3{
+    width: 70%;
+    margin: 0 auto;
+    padding: 1.3em 0;
+}
+
+.individual-meaning-container{
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 1.1em;
+}
+
+.meaning-container ul{
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+}
+
+.synonyms-container{
+    display: flex;
+    border-bottom: 2px solid var(--secondary-color);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.synonyms-container h3{
+    padding: .80em 0;
+    margin: 0;
+}
+
+.another{
+    margin: 0;
+}
+
+
+.verb-part-of-speech-container{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2.5em;
+}
+
+.verb-meaning-definition{
+    border-bottom: 2px solid var(--secondary-color);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.verb-meaning-definition ul p{
+    color: #a4a2a2;
+}
+
+.synonyms-container .synonym-name{
+    color: #9e2ce4;
+}
+
+.source-inner-container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.link-container a{
+    text-decoration: none;
+    color: var(--thietiary-color);
+}
+
+.link-container{
+    display: flex;
+    align-items: center;
+    gap: .70em;
+}
+
+
+.link-icon{
+    font-size: 1.3em;
+}
+
+
+@media (min-width: 1024px) {
+    nav ul{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .link-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .source-inner-container{
+        display: flex;
+        gap: 2.5em;
+    }
 }
